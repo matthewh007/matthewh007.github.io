@@ -3,31 +3,58 @@
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type ="text/css" href="style.css">
-<body style="background:url(https://wallpaperaccess.com/full/3145502.jpg); background-size:100%; height: auto; filter: brightness(100%);" >
 
 
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black" style="display:none" id="mySidebar">
+<header class="headerHome">
+  <a class= "logo"> My Portfolio </a>
+  <ul>
+    <li> <a href="new_freshman.html"> Freshman </a> </li>
+    <li> <a href="sophomore.html"> Sophomore </a> </li>
+    <li> <a href="junior.html"> Junior </a> </li>
+    <li> <a href="about.html"> Contact </a> </li>
+  </ul>
+  </header>
+
+
+<!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black" style="display:none" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large w3-hover-blue"onclick="w3_close()">Close &times;</button>
   <h3 class="w3-bar-item w3-border-bottom"> My Portoflio </h3>
-  <a href="freshman.html" class="w3-bar-item w3-button w3-border-bottom w3-hover-tan">Freshman Year</a>
+  <a href="new_freshman.html" class="w3-bar-item w3-button w3-border-bottom w3-hover-tan">Freshman Year</a>
   <a href="sophomore.html" class="w3-bar-item w3-button  w3-border-bottom w3-hover-tan">Sophomore Year</a>
   <a href="junior.html" class="w3-bar-item w3-button w3-border-bottom w3-hover-tan">Junior Year</a>
   <a href="about.html" class="w3-bar-item w3-button w3-border-bottom w3-hover-tan">Contact</a>
 </div>
-
-
 <button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
-<div id="main" class="w3-center" style="color:white;">
-<h1> The Astronomer </h1>
+<body class="home2">
+ -->
 
-<br> </br>
-<h3> Welcome to my page! </h3>
+<section class="homeSect2">
+    
+    <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200812135448/iStock-1057665734.jpg" id="stars3">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/008/507/561/small/lens-flare-light-special-effect-background-free-png.png" id="light">
+   <img src="https://www.freeiconspng.com/uploads/grass-landscape-green-png-images-3.png" id="landscape">
+    <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-looking-through-telescope-4225512-3539697.png" id="dude">
+   
 
-<p> Thank you for taking the time to view my website. My name is Matthew Hernandez and I am enrolled as a student at the University of Central Florida. I am currently completing a B.S major in Physics with an Astronomy track and a minor in Computer Science. </p>
-<p> With college opening new horizons, I wanted to showcase my academic journey. </p>
+</section>
 
-<t>  </t>
+<div id="main" style="color:white; text-shadow:1px 1px 0 #444; text-align: center;">
+
+
+<h1 class="homeText2"> The Astronomer </h1>
+
+<h2 class="homeText2"> Welcome to my page! </h3>
+
+<p class="paraText2"> Thank you for taking the time to view my website. </p>
+<p class="paraText2"> My name is Matthew Hernandez and I am enrolled as a student at the University of Central Florida. I am currently completing a Bachlor of Sciences in Physics with an Astronomy track and a minor in Computer Science. </p>
+<br></br>
+<p class="paraText2"> With college opening new horizons, I wanted to showcase my academic journey. </p>
+<br></br>
+
+<p class="paraText2"> My goal is to also show some of my projects throughout my time in UCF and some important achievements. </p>
 </div>
+
+
 <script>
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";
@@ -41,6 +68,18 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("openNav").style.display = "inline-block";
 }
+</script>
+<script>
+let stars3=document.getElementById('stars3');
+let earth=document.getElementById('landscape');
+    window.addEventListener('scroll', function()
+    {
+      let value=window.scrollY;
+      stars3.style.marginLeft = value * 1.2 +'px';
+      earth.style.top= value * 0.30 +'px';
+      //star.style.filter=brightness(value*1-'px')
+
+    })
 </script>
 
 </body>
