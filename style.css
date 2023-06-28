@@ -1,0 +1,506 @@
+@import url('https://rare-gallery.com/uploads/posts/128048-earth-horizon-4k.jpg');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+.sophomore 
+{
+	min-height: 200vh;
+	overflow-x: hidden;
+	background: linear-gradient(#000000, #7597de);
+
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10000;
+/*	background: #6495ED;*/
+/*	mix-blend-mode: screen;*/
+}
+
+header .logo
+{
+	color: #ffff;
+	font-weight: 800;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	align-items: left;
+
+}
+header ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	list-style: none;
+	margin-left: 20px;
+
+}
+header ul li a 
+{
+	font-weight: 600;
+	text-decoration: none;
+	padding: 6px 15px ;
+	color: #ffff;
+	border-radius: 20px ;
+}
+header ul li a:hover 
+{
+	background: #008B8B;
+	color : #000000;
+
+}
+section
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden ;
+}
+.sophSect::before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background:linear-gradient(to top,#4d79ff,  transparent);
+	z-index: 1000;
+}
+section img
+{
+	position: absolute;
+	top: 50;
+	object-fit: cover;
+}
+#spaceCraft
+{
+	top:400px;
+	left:0;
+	width:10%;
+
+}
+#stars
+{
+	width: 100%;
+}
+#sun
+{
+	right:10px;
+	justify-content: center;
+	align-items: center;
+/*mix-blend-mode: screen;*/
+	
+}
+#horizon
+{
+	left: 0;
+	width: 66%;
+}
+#text
+{
+	top:10px;
+	position: relative;
+	font-weight: 700;
+	right:-320px;
+	color: #000000;
+	white-space: nowrap;
+	font-size: 3.5vw;
+	z-index: 5;
+	transform: translate(100px);
+}
+.sec
+{
+	position: relative;
+	padding: 100px;
+	background: linear-gradient(#4d79ff, #000000);
+
+}
+.sec p
+{
+	position: relative;
+	padding: 30px 100px;
+	font-size: 3em;
+	margin-bottom: 10px;
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 1.5px;
+}
+#volunteering
+{
+	justify-content: right;
+	align-items: right;
+}
+.sec h2
+{
+	font-size: 4em;
+	margin-bottom: 10px;
+	color: #A9A9A9;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+}
+
+#telescope
+{
+	right: 10px;
+	position: relative;
+	width:40.5%;
+	height: auto;
+	justify-content: left;
+	align-items: left;
+}
+#space
+{
+	right: 20px;
+	background-size: contain;
+	position: absolute;
+	width:35%;
+	height:auto;
+	justify-content: right;
+	align-items: right;
+}
+.header
+{
+	background-color: black;
+}
+.headerHome
+{
+	background-color: black;
+	opacity: .8;
+}
+.jy
+{
+	min-height: 200vh;
+	overflow-x: hidden;
+	background:linear-gradient(to top, darkred,  transparent);
+}
+#wip
+{
+	width: 100%;
+	position: relative;
+	top: 50px;
+	/*left: 0;*/
+
+	object-fit: cover;
+}
+
+/*contact(about) stuff*/
+
+.h2
+{
+	position: relative;
+	right: -550px;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	color: #000000;
+	white-space: nowrap;
+	font-size: 4vw;
+
+}
+
+div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+div li {
+  float: left;
+}
+
+div li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+div li a:hover {
+  background-color: #111111;
+}
+
+
+
+/*freshman stuff*/
+.freshman
+{
+	min-height: 200vh;
+	overflow-x: hidden;
+	background: linear-gradient(sandybrown, midnightblue);
+
+}
+.freshPic::before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background:linear-gradient(to top, sandybrown,  transparent);
+	z-index: 1000;
+}
+.h1
+{
+	position: relative;
+	right: -550px;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	color: ghostwhite;
+	white-space: nowrap;
+	font-size: 4vw;
+}
+.freshText
+{
+	position: relative;
+	padding: 30px 100px;
+	font-size: 2.8em;
+	margin-bottom: 10px;
+	color: #fff;
+	font-weight: 100;
+	letter-spacing: 1.5px;
+}
+#nebula
+{
+	
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+/*home page*/
+.home
+{
+	min-height: 200vh;
+	overflow-x: hidden;
+	background: linear-gradient(black, black);
+}
+#earth
+{	
+	object-fit: cover;
+	filter: brightness(70%);
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	
+}
+.homeSect
+{
+	position: absolute;
+	
+}
+.homeSect::before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20px;
+	background:linear-gradient(to top,#4d79ff,  transparent);
+	z-index: 1000;
+}
+
+.homeText
+{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.paraText
+{
+	position: relative;
+	padding: 30px 100px;
+	font-size: 2.8em;
+	margin-bottom: 10px;
+	color: #fff;
+	font-weight: 100;
+	letter-spacing: 1.5px;
+}
+.stars2
+{
+	top:0;
+	left: 100px;
+	object-fit: cover;
+	position: absolute;
+	top:200px;
+	right: 100px;
+	width: 10%;
+	height: auto;
+
+	
+}
+
+/*home page2*/
+.home2
+{
+	min-height: 150hv;
+	overflow-x: hidden;
+	background: linear-gradient(to top , black, #006400);
+
+}
+.homeSect2
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden ;
+	min-height: 145vh;
+	position: absolute;
+	top: 0;
+	object-fit: cover;
+	
+}
+.homeSect2::before
+{
+
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	background:linear-gradient(to top, #006400, transparent);
+	z-index: 1000;
+}
+
+.homeText2
+{
+	top: 25px;
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 30px 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+.paraText2
+{
+	position: relative;
+	padding: 30px 80px;
+	font-size: 2em;
+	margin-bottom: 5px;
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 1.5px;
+}
+#stars3
+{
+	top: 0;
+	width: 130%;
+	height: auto;
+}
+#landscape
+{	
+	position: absolute;
+	object-fit: cover;
+	filter: brightness(15%);
+	top: 500px;
+	width: 100%;
+	height: 980px;
+	justify-content: center;
+	align-items: center;
+	
+/*	bottom: 275px;
+	width: 12%;
+
+	left: 450px;
+	height: auto;
+	justify-content: center;
+	align-items: center;*/
+}
+#mySideBar
+{
+	position: absolute;
+	z-index: 1000;
+
+}
+#openNav
+{
+	position: absolute;
+	z-index: 1000;
+}
+#dude
+{
+	filter: brightness(2);
+	bottom: 275px;
+	width: 12%;
+
+	left: 450px;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+}
+#light
+{
+	object-fit: cover;
+	left: 20px;
+	top: 140px;
+	width: 100%;
+	height: 1000px;
+	justify-content: center;
+	align-items: center;
+}
+
+/*for junior*/
+.sec2
+{
+	position: relative;
+	padding: 100px;
+}
+
+.sec2 h2
+{
+	font-size: 3em;
+	margin-bottom: 10px;
+	color: skyblue;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+}
+.h1_junior
+{
+	padding: 30px 80px;
+	position: relative;
+	right: -400px;
+	top:200;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	color: black;
+	font-size: 6vw;
+}

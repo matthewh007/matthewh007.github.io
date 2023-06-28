@@ -1,0 +1,300 @@
+@import url('https://rare-gallery.com/uploads/posts/128048-earth-horizon-4k.jpg');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10000;
+/*	background: #6495ED;*/
+/*	mix-blend-mode: screen;*/
+}
+header .logo
+{
+	color: #ffff;
+	font-weight: 800;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	align-items: left;
+
+}
+header ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	list-style: none;
+	margin-left: 20px;
+
+}
+header ul li a 
+{
+	font-weight: 600;
+	text-decoration: none;
+	padding: 6px 15px ;
+	color: #ffff;
+	border-radius: 20px ;
+}
+header ul li a:hover 
+{
+	background: #008B8B;
+	color : #000000;
+
+}
+.header
+{
+	background-color: black;
+}
+.jy
+{
+	min-height: 200vh;
+	overflow-x: hidden;
+	background:linear-gradient(to top, darkred,  transparent);
+}
+#wip
+{
+	width: 100%;
+	position: relative;
+	top: 50px;
+	/*left: 0;*/
+
+	object-fit: cover;
+}
+
+/*contact(about) stuff*/
+.about
+{
+	min-height: 200vh;
+	overflow-x: hidden;
+	object-fit: cover;
+	display: flex;
+	background:linear-gradient(to top, beige,  transparent);
+}
+.h2
+{
+	position: relative;
+	right: -550px;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	color: #000000;
+	white-space: nowrap;
+	font-size: 4vw;
+
+}
+
+.new
+{
+
+	position: absolute;
+	padding: 100px;
+	min-height: 200vh;
+	overflow-x: hidden;
+	background:linear-gradient(to top, beige,  darkturquoise);
+	width: 100%;
+	height: auto;
+
+}
+
+.pic
+{
+	top: 30px;
+	width: 80%;
+	height: auto;
+}
+
+.pic2
+{
+	top: 9px;
+	left: 9px;
+	width: 80%;
+	height: auto;
+	position: absolute;
+	justify-content: center;
+}
+
+div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+div li {
+  float: left;
+}
+
+div li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+div li a:hover {
+  background-color: #111111;
+}
+
+.solar-system {
+  position: absolute;
+  justify-content: center;
+  width: 450px; /* Adjust size as needed */
+  height: 400px; /* Adjust size as needed */
+  top: 700px; /* Adjust size as needed */
+  right: 400px;
+}
+
+
+
+.planet {
+  position: absolute;
+  /* Adjust size as needed */
+  height: auto; /* Adjust size as needed */
+  border-radius: 50%;
+  /* Adjust duration as needed */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/*@keyframes orbit {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}*/
+
+@keyframes orbit-mercury {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes orbit-venus {
+  from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+}
+
+@keyframes orbit-earth {
+  from { transform: rotate(0deg) translateX(390px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(390px) rotate(-360deg); }
+}
+
+@keyframes orbit-mars {
+  from { transform: rotate(0deg) translateX(530px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(530px) rotate(-360deg); }
+}
+@keyframes orbit-belt {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg) ; }
+}
+
+@keyframes orbit-sun{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg) ; }
+}
+
+.sun {
+  position: absolute;
+  top: -0.5%;
+  left: 12%;
+   /* Adjust size as needed */
+  width: 32%;
+  height: auto; /* Adjust size as needed */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mercury {
+  /* Customize appearance as desired */
+  animation-name: orbit-mercury;
+  animation-iteration-count: infinite;
+  animation-duration: 9s; /* Adjust duration as needed */
+  top:20px;
+  width: 17%;
+
+}
+
+.venus {
+  animation-name: orbit-venus;
+  animation-iteration-count: infinite;
+  animation-duration: 12s; /* Adjust duration as needed */
+  width: 28%;
+/*  top:100px;*/
+}
+
+.earth {
+  animation-name: orbit-earth;
+  animation-iteration-count: infinite;
+  animation-duration: 17s; /* Adjust duration as needed */
+  width: 32%;
+  height: auto;
+/*  top:200px;*/
+}
+
+.mars {
+ 	animation-name: orbit-mars;
+ 	animation-iteration-count: infinite;
+  animation-duration: 21s; /* Adjust duration as needed */
+  width: 30%;
+  height: auto;
+/*  top:300px;*/
+}
+
+.belt {
+ 	animation-name: orbit-belt;
+ 	animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 25s; /* Adjust duration as needed */
+  top: 80px;
+  left: 10px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+/*  top:300px;*/
+
+}
+#Aplanets
+{
+	position: absolute;
+	width: 110%;
+
+	justify-content: center;
+}
+#Bplanets
+{
+	position: absolute;
+	width: 110%;
+
+	justify-content: center;
+}
+
+.aboutSect::before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+/*	background:linear-gradient(to top,#4d79ff,  transparent);*/
+	z-index: 1000;
+}
+
+#z{
+	z-index: 100px;
+}

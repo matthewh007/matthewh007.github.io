@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type ="text/css" href="style.css">
+<body class="home">
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-hover-blue"onclick="w3_close()">Close &times;</button>
+  <h3 class="w3-bar-item w3-border-bottom"> My Portoflio </h3>
+  <a href="freshman.html" class="w3-bar-item w3-button w3-border-bottom w3-hover-tan">Freshman Year</a>
+  <a href="sophomore.html" class="w3-bar-item w3-button  w3-border-bottom w3-hover-tan">Sophomore Year</a>
+  <a href="junior.html" class="w3-bar-item w3-button w3-border-bottom w3-hover-tan">Junior Year</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-border-bottom w3-hover-tan">Contact</a>
+</div>
+
+
+<button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
+
+<section class="homeSect">
+    <!-- <img src="C:\Users\matth\Downloads\Screenshot 2023-05-12 165833.png" id="stars2"> -->
+    <img src="https://rare-gallery.com/uploads/posts/128048-earth-horizon-4k.jpg" id="earth">
+    <!-- <img src="https://www.seekpng.com/png/full/89-893553_white-flash-light-png.png"id="star"> -->
+    <img src="https://i.pinimg.com/originals/6d/f2/de/6df2deee650331d0e8b264f1e1f6b570.png" class="stars2">
+    <!-- <img src="https://iconventures.com/wp-content/uploads/2021/02/fireeye-1.png" id="earth"> -->
+
+</section>
+
+<div id="main" class="w3-center" style="color:white;">
+
+
+
+<h1 class="homeText"> The Astronomer </h1>
+
+<br> </br>
+<h3 class="homeText"> Welcome to my page! </h3>
+
+<p class="paraText"> Thank you for taking the time to view my website. My name is Matthew Hernandez and I am enrolled as a student at the University of Central Florida. I am currently completing a B.S major in Physics with an Astronomy track and a minor in Computer Science. </p>
+<p class="paraText"> With college opening new horizons, I wanted to showcase my academic journey. </p>
+
+</div>
+
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+// let stars=document.getElementById('stars2');
+// let star=document.getElementById('star')
+//     window.addEventListener('scroll', function()
+//     {
+//       let value=window.scrollY;
+//       stars.style.marginLeft = value * 0.2 +'px';
+//       //star.style.top=value*0.2+'px'
+//       //star.style.filter=brightness(value*1-'px')
+
+//     })
+</script>
+
+</body>
+</html>

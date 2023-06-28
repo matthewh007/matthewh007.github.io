@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type ="text/css" href="style.css">
+	</head>
+<body class="sophomore">
+	<header>
+	<a class= "logo"> My Portfolio </a>
+	<ul>
+		<li> <a href="newIndex2.html" class="active"> Home </a> </li>
+		<li> <a href="new_freshman.html"> Freshman </a> </li>
+		<li> <a href="junior.html"> Junior </a> </li>
+		<li> <a href="about.html"> Contact </a> </li>
+	</ul>
+	</header>
+	<section class="sophSect">
+
+		<img src="https://wallpaperaccess.com/full/39632.jpg" id="stars">
+		<img src="https://www.solarsystemscope.com/spacepedia/images/handbook/renders/sun.png" id="sun">
+		
+		<img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2018/11/artist_s_impression_of_orion_spacecraft7/17858902-1-eng-GB/Artist_s_impression_of_Orion_spacecraft.png" id="spaceCraft">
+		<br></br>
+		<img src="https://images.free3d.com/imgd/l99/5e27b3d126be8b8d488b4567/3594-c4d-earth.png" id="horizon">
+
+		<p id="text">Sophomore Year</p>
+	</section>
+
+	<div class="sec" id="sec">
+
+		<p> Like a star forming from a nebula, my knowledge on physics and the professional workforce began to manifest. In the next year I hope to expand this knowledge and really apply everything I've retained. </p>
+
+		<h2 id="h2"> Fall 2022 </h2>
+		<p>I completed the first semester of sophomore year in a good standing while getting almost all A's and an A-. I participated in a lot more clubs and volunteering activites. The second semester was rough for me because I was taking five classes. </p>
+		<br></br>
+
+		<h2 id="h2"> Spring 2023 </h2>
+		<p>Fortunately, I was able to pass all my classes but I was not satisfied with my performance for that spring. This semester ignited my interest in python because I saw that it is utilized when creating physics programs and data science. I will strive to do better in the summer and the following semesters. </p>
+
+		<h2 id="h2"> Club Activities </h2>
+		
+		<p id="volunteering"> I helped volunteer for the Astronomy Club at UCF and was able to volunteer for Knights under the stars. I was able to educate kids and other college students on the parts of a telescope and what was out in the sky at the time. Here are some pictures from the event.</p>
+		<img src="C:\Users\matth\Downloads\IMG-7184.jpg" id="telescope">
+
+		<img src="C:\Users\matth\Downloads\IMG-7169.jpg" id="space"> 
+		<p> I also participated in HackADay by Knight Hacks@UCF, where we created the front end of an app that was like duolingo but for learning anything and it would utilize an AI to better understand how to present information to people depending on their preferred learning style. </p>
+		<p>I was also part of a project for Society of Phyiscs Students called the Marsh White Outreach project. We went to a local elementary school and taught kids about circuits and the phyiscs behind them. Furthermore, we demonstrated electricity in mini-circuits and explained the different applications of circuits in real life. </p>
+	</div>
+	<script>
+		let stars=document.getElementById('stars');
+		let sun=document.getElementById('sun');
+		let text=document.getElementById('text');
+		let horizon=document.getElementById('horizon');
+		let header = document.querySelector('header');
+		window.addEventListener('scroll', function()
+		{
+			let value=window.scrollY;
+			stars.style.marginLeft = value * 0.2 +'px';
+			sun.style.top = value * 0.85 +'px';
+			sun.style.marginRight = value * 0.35 +'px';
+			horizon.style.top = value * 0.5 +'px';
+			//horizon.style.marginRight = value * 1 +'px';
+			text.style.marginRight = value * 4 +'px';
+			text.style.marginTop = value * 0.5 +'px';
+			header.style.top = value * 0.5 +'px';
+			spaceCraft.style.marginLeft = value * 3 +'px';
+			text.style.marginTop = value * 3 +'px';
+		})
+	</script>
+</body>
+</html>
