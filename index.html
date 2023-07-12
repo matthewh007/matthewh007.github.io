@@ -37,6 +37,8 @@
 <br></br>
 
 <p class="paraText2"> With college opening new horizons, I wanted to showcase my academic journey. </p>
+
+<br></br>
 <br></br>
 <br></br>
 <br></br>
@@ -48,27 +50,13 @@
 
 
 <script>
-function w3_open() {
-  document.getElementById("main").style.marginLeft = "25%";
-  document.getElementById("mySidebar").style.width = "25%";
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openNav").style.display = 'none';
-}
-
-function w3_close() {
-  document.getElementById("main").style.marginLeft = "0%";
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openNav").style.display = "inline-block";
-}
-</script>
-<script>
 let stars3=document.getElementById('stars3');
 let earth=document.getElementById('landscape');
     window.addEventListener('scroll', function()
     {
       let value=window.scrollY;
       stars3.style.marginLeft = value * 1.2 +'px';
-      earth.style.top= value * 0.30 +'px';
+      earth.style.top= value * 0.25 +'px';
       //star.style.filter=brightness(value*1-'px')
 
     })
