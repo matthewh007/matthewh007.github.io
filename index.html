@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <link rel="stylesheet" type ="text/css" href="style.css">
 
 
@@ -14,27 +15,25 @@
   </ul>
   </header>
 
-
 <section class="homeSect2">
     
     <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200812135448/iStock-1057665734.jpg" id="stars3">
     <img src="https://static.vecteezy.com/system/resources/thumbnails/008/507/561/small/lens-flare-light-special-effect-background-free-png.png" id="light">
    <img src="https://www.freeiconspng.com/uploads/grass-landscape-green-png-images-3.png" id="landscape">
-    <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-looking-through-telescope-4225512-3539697.png" id="dude">
-   
 
 </section>
+
+
 
 <div id="main" style="color:white; text-shadow:1px 1px 0 #444; text-align: center;">
 
 
 <h1 class="homeText2"> The Astronomer </h1>
 
-<h2 class="homeText2"> Welcome to my page! </h3>
+<h2 class="homeText2"> Welcome to my page! </h2>
 
 <p class="paraText2"> Thank you for taking the time to view my website. </p>
 <p class="paraText2"> My name is Matthew Hernandez and I am enrolled as a student at the University of Central Florida. I am currently completing a Bachlor of Sciences in Physics with an Astronomy track and a minor in Computer Science. </p>
-<br></br>
 
 <p class="paraText2"> With college opening new horizons, I wanted to showcase my academic journey. </p>
 
@@ -42,25 +41,57 @@
 <br></br>
 <br></br>
 <br></br>
-<br></br>
-<br></br>
 
-<p class="paraText2"> My goal is to also show some of my projects throughout my time in UCF and some important achievements. </p>
+<img src="https://cdni.iconscout.com/illustration/premium/thumb/man-looking-through-telescope-4225512-3539697.png" id="dude">
+
+<p class="paraText3"> My goal is to also show some of my projects throughout my time in UCF and some important achievements. </p>
 </div>
 
 
 <script>
 let stars3=document.getElementById('stars3');
-let earth=document.getElementById('landscape');
+let landscape=document.getElementById('landscape');
     window.addEventListener('scroll', function()
     {
       let value=window.scrollY;
-      stars3.style.marginLeft = value * 1.2 +'px';
-      earth.style.top= value * 0.25 +'px';
+      stars3.style.marginLeft = value * 1 +'px';
+      landscape.style.top= value * 0.25 +'px';
       //star.style.filter=brightness(value*1-'px')
 
     })
 </script>
+<style>
 
+@media screen and (max-width: 910px), screen and (max-height:640px) {
+  body {
+    background-image: url('https://wallpaperaccess.com/full/39632.jpg');
+    background-size: cover;
+
+  }
+    .logo 
+    {
+      width: 40%;
+    }
+     #landscape{
+      visibility: collapse;
+    }
+    #dude{
+      visibility: collapse;
+    }
+    #light{
+      visibility: collapse;
+    }
+    #stars3{
+      visibility: collapse;
+    }
+    .homeSect2{
+      visibility: collapse;
+    }
+    .homeSect2::before
+    {
+      visibility: collapse;
+    }
+
+</style>
 </body>
 </html>
