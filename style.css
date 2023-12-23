@@ -392,7 +392,7 @@ div li a:hover {
 }
 .homeSect2
 {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	height: auto;
 	padding: 100px;
@@ -401,11 +401,9 @@ div li a:hover {
 	align-items: center;
 	overflow: hidden ;
 	min-height: 140vh;
-	position: absolute;
 	top: 0;
 	object-fit: cover;
 	visibility: visible;
-	
 }
 .homeSect2::before
 {
