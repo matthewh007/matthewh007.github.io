@@ -398,7 +398,7 @@ div li a:hover {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden ;
-	min-height: 140vh;
+	min-height: 150vh;
 	top: 0;
 	object-fit: cover;
 	visibility: visible;
