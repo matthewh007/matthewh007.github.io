@@ -405,7 +405,7 @@ div li a:hover {
 	object-fit: cover;
 	visibility: visible;
 }
-.homeSect2::before
+/*.homeSect2::before
 {
 
 	content: '';
@@ -416,7 +416,7 @@ div li a:hover {
 	background:linear-gradient(to top, #006400, transparent);
 	z-index: 1000;
 	visibility: visible;
-}
+}*/
 
 .homeText2
 {
@@ -426,11 +426,11 @@ div li a:hover {
 	position: relative;
 	width: 100%;
 	height: auto;
-	padding: 20px 80px;
+	padding: 25px 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: 500;
+	font-weight: 700;
 }
 .paraText2
 {
@@ -510,30 +510,13 @@ div li a:hover {
 	visibility: visible;
 }
 
-/*for junior*/
-.sec2
+#selfie
 {
+	top: 30px;
+	width: 45%;
 	position: relative;
-	padding: 100px;
+	border-radius: 20%;
 }
-
-.sec2 h2
-{
-	font-size: 3em;
-	margin-bottom: 10px;
-	color: skyblue;
-	font-weight: 400;
-	letter-spacing: 1.5px;
-}
-.h1_junior
-{
-	padding: 30px 80px;
-	position: relative;
-	right: -400px;
-	top:200;
-	justify-content: center;
-	align-items: center;
-	font-weight: 700;
-	color: black;
-	font-size: 6vw;
+#selfie2{
+border-radius: 10%;
 }
