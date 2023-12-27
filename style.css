@@ -515,6 +515,25 @@ div li a:hover {
 	position: relative;
 	border-radius: 20%;
 }
-#selfie2{
+#selfie2
+{
 border-radius: 10%;
+}
+#rocket
+{
+	top:520px;
+	right:0px;
+	width: 9%;
+}
+#smoke{
+
+	top:605px;
+	right:-23px;
+	width: 10%;
+}
+#smoke2{
+
+	top:605px;
+	right:12px;
+	width: 10%;
 }
