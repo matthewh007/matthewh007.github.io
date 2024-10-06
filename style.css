@@ -85,6 +85,13 @@ section
 	background:linear-gradient(to top,#4d79ff,  transparent);
 	z-index: 1000;
 }
+p.style5 {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    line-height: 2;
+    font-weight: 300;
+}
 section img
 {
 	position: absolute;
