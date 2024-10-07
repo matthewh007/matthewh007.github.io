@@ -92,6 +92,13 @@ p.style5 {
     line-height: 2;
     font-weight: 300;
 }
+p.style6 {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    line-height: 5;
+    font-weight: 400;
+}
 section img
 {
 	position: absolute;
