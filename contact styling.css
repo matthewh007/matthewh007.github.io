@@ -90,6 +90,7 @@ header ul li a:hover
 	font-weight: 700;
 	margin: auto;
 	color: whitesmoke;
+	margin-top: 90px !important;
 }
 
 .sun {
@@ -100,7 +101,7 @@ header ul li a:hover
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
-
+    margin-top: 40px !important;
 }
 .resume {
   /* Customize appearance as desired */
@@ -196,4 +197,79 @@ header ul li a:hover
 @keyframes orbit-sun{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg) ; }
+}
+
+@media (max-width: 600px) {
+    body, .contact-section, .contact-container {
+        padding: 1em 0.5em !important;
+        min-height: unset !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+    h1, h2 {
+        font-size: 6vw !important;
+        text-align: center !important;
+        margin: 0.5em 0 !important;
+    }
+    p, label, input, textarea {
+        font-size: 1.1em !important;
+        text-align: center !important;
+        margin: 0.5em 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    img, .contact-image {
+        width: 60vw !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 1em auto !important;
+        display: block !important;
+        position: static !important;
+    }
+    form {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .homeText2 {
+        position: static !important;
+        padding: 10px 5vw !important;
+        font-size: 1.1em !important;
+        margin-top: 70px !important; /* push below menu */
+        z-index: 1 !important;
+        background: rgba(0,0,0,0.6);
+        width: 90vw !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .sun, .resume, .gmail, .earth, .mars {
+        position: static !important;
+        display: inline-block !important;
+        width: 18vw !important;
+        min-width: 40px;
+        max-width: 60px;
+        margin: 2vw !important;
+        top: unset !important;
+        left: unset !important;
+        transform: none !important;
+        animation: none !important;
+    }
+    .belt {
+        display: none !important;
+    }
+    .about {
+        min-height: unset !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
 }

@@ -734,4 +734,35 @@ border-radius: 10%;
         display: block !important;
         position: static !important;
     }
+    .sophomore, .sophSect {
+        padding: 1em 0.5em !important;
+        min-height: unset !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+    .sophSect h1, .sophSect h2 {
+        font-size: 6vw !important;
+        text-align: center !important;
+        margin: 0.5em 0 !important;
+    }
+    .sophSect p {
+        font-size: 1.1em !important;
+        text-align: center !important;
+        margin: 0.5em 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .sophSect img {
+        width: 60vw !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 1em auto !important;
+        display: block !important;
+        position: static !important;
+    }
 }
