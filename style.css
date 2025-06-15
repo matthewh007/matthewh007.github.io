@@ -655,3 +655,31 @@ border-radius: 10%;
   }
 }
 */
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2%;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    section {
+        padding: 50px;
+    }
+    .sec {
+        padding: 50px;
+    }
+    .sec p {
+        padding: 15px 30px;
+    }
+    .sec h2 {
+        font-size: 2em;
+    }
+    #telescope, #space {
+        width: 100%;
+    }
+    .h2 {
+        right: 0;
+        font-size: 3vw;
+    }
+}
