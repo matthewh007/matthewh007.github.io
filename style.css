@@ -414,11 +414,25 @@ div li a:hover {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden ;
-	min-height: 150vh;
+	min-height: 120vh;
 	top: 0;
 	object-fit: cover;
 	visibility: visible;
 }
+/*
+.homeSect2 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Enough to fill screen, not more 
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically 
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  visibility: visible;
+}
+*/
 /*.homeSect2::before
 {
 
@@ -432,20 +446,19 @@ div li a:hover {
 	visibility: visible;
 }*/
 
-.homeText2
-{
-	margin-left: auto;
-	margin-right: auto;
+.homeText2 {
+	margin: 0 auto 10px auto;  /* Reduce bottom margin */
 	top: 40px;
 	position: relative;
 	width: 100%;
 	height: auto;
-	padding: 25px 30px;
+	padding: 25px 30px 10px 30px; /* Reduce bottom padding */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-weight: 700;
 }
+
 .paraText2
 {
 	margin-left: auto;
@@ -553,3 +566,92 @@ border-radius: 10%;
 	right:12px;
 	width: 10%;
 }
+/*
+@media screen and (max-width: 1000px) {
+  body, html {
+    overflow-x: hidden;
+  }
+
+  section,
+  .homeSect2,
+  .sec,
+  .sophomore,
+  .freshman,
+  .home,
+  .home2 {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+
+  header {
+    padding: 20px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo {
+    font-size: 1.5em;
+  }
+
+  header ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  header ul li {
+    margin: 10px 0;
+  }
+
+  .homeText2,
+  .h1,
+  .h2 {
+    font-size: 5vw;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .paraText2,
+  .paraText3,
+  .freshText,
+  .sec p {
+    font-size: 1.2em;
+    padding: 15px 20px;
+    line-height: 1.4;
+  }
+
+  #dude, #stars3, #rocket, #smoke, #smoke2, #landscape, #light {
+    position: absolute;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    /* retain their current behavior */
+    /*
+  }
+
+  #text {
+    font-size: 5vw;
+    position: relative;
+    right: auto;
+    transform: none;
+    text-align: center;
+  }
+
+  .homeText {
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .homeSect2 {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #earth {
+    width: 100%;
+    height: auto;
+  }
+}
+*/
