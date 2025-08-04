@@ -80,7 +80,7 @@ header ul li a:hover
 .homeText2
 {
 	top: 20%;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	height: auto;
 	padding: 25px 30px;
@@ -156,11 +156,11 @@ header ul li a:hover
 }
 
 .belt {
- 	animation-name: orbit-belt;
- 	animation-iteration-count: infinite;
+  animation-name: orbit-belt;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-duration: 25s; /* Adjust duration as needed */
-  top: 5%;
+  top: 60%;
   left: 10px;
   width: 96%;
   height: auto;
