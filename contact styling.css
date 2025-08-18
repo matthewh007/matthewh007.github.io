@@ -129,6 +129,10 @@ header ul li a:hover
   justify-content: center;
 }
 
+.solar-system {
+  position: relative;
+  top: -30px; /* move closer to header text; tweak as needed */
+}
 .earth {
   animation-name: orbit-earth;
   animation-iteration-count: infinite;
