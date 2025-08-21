@@ -207,12 +207,47 @@
           margin: 0 auto;
           text-align: center;
         }
-      @media (max-width: 1200px) {
+/* Responsive Design */
+        @media (max-width: 1200px) {
             header {
                 padding: 20px 50px;
             }
-      }
-      @media (max-width: 768px) {
+            
+            section {
+                padding: 50px;
+            }
+            
+            .sec {
+                padding: 50px;
+            }
+            
+            .sec h2 {
+                font-size: 2.2em;
+                padding: 0 50px;
+                padding-left: 54px;
+            }
+            
+            .role-title {
+                padding: 0 54px;
+                font-size: 1.2em;
+            }
+            
+            .experience-section {
+                margin: 20px 30px;
+                padding: 30px;
+            }
+            
+            .sec p {
+                padding: 20px 50px;
+            }
+            
+            /* Start increasing earth size on smaller screens */
+            #horizon {
+                width: 85%;
+            }
+        }
+        
+        @media (max-width: 768px) {
             header {
                 padding: 15px 30px;
                 height: 70px;
@@ -229,7 +264,64 @@
             header ul li {
                 margin: 5px;
             }
-          }
+            
+            section {
+                padding: 30px 20px;
+                height: 80vh;
+            }
+            
+            .sec {
+                padding: 30px 20px;
+            }
+            
+            .sec h2 {
+                font-size: 1.9em;
+                padding: 0 20px;
+                padding-left: 24px;
+                text-align: left;
+            }
+            
+            .role-title {
+                padding: 0 24px;
+                font-size: 1.1em;
+                text-align: left;
+            }
+            
+            .experience-section {
+                margin: 15px 10px;
+                padding: 25px;
+            }
+            
+            .sec p {
+                padding: 15px 20px;
+            }
+            
+            p.style5 {
+                font-size: 1.1em;
+                line-height: 1.8;
+            }
+            
+            p.style6 {
+                font-size: 1.3em;
+                line-height: 1.5;
+            }
+            
+            #spaceCraft {
+                width: 15%;
+                min-width: 60px;
+            }
+            
+            #sun {
+                width: 150px;
+                height: 150px;
+            }
+            
+            /* Significantly increase earth size on mobile */
+            #horizon {
+                width: 90%;
+            }
+        }
+        
         @media (max-width: 480px) {
             header {
                 flex-direction: column;
@@ -246,7 +338,68 @@
                 width: 100%;
                 justify-content: center;
             }
-          }
+            
+            section {
+                padding: 20px 15px;
+                height: 70vh;
+            }
+            
+            .sec {
+                padding: 20px 15px;
+            }
+            
+            .sec h2 {
+                font-size: 1.7em;
+                padding: 0 15px;
+                padding-left: 19px;
+                margin-bottom: 8px;
+            }
+            
+            .role-title {
+                padding: 0 19px;
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+            
+            .experience-section {
+                margin: 10px 5px;
+                padding: 20px;
+            }
+            
+            .sec p {
+                padding: 10px 15px;
+            }
+            
+            p.style5 {
+                font-size: 1em;
+                line-height: 1.6;
+            }
+            
+            p.style6 {
+                font-size: 1.2em;
+                line-height: 1.4;
+            }
+            
+            #text {
+                font-size: clamp(1.25rem, 10vw, 2rem);
+            }
+            
+            #spaceCraft {
+                width: 20%;
+                min-width: 50px;
+                top: 300px;
+            }
+            
+            #sun {
+                width: 100px;
+                height: 100px;
+            }
+            
+            /* Maximum earth size on smallest screens */
+            #horizon {
+                width: 120%;
+            }
+        }
     </style>
 <body>
 
