@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Info</title>
+  <link rel="stylesheet" type="text/css" href="contact styling.css">
+  <link rel="icon" type="image/png" href="astronaut1.png">
+  <link rel="apple-touch-icon" href="astronaut1.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url(https://wallpaperaccess.com/full/39632.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Updated header to match experience page */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10000;
+      transition: all 0.3s ease;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    header .logo {
+      color: #ffff;
+      font-weight: 700;
+      font-size: 2em;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    header ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header ul li {
+      list-style: none;
+      margin-left: 10px;
+    }
+
+    header ul li a {
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 15px;
+      color: #ffff;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    header ul li a:hover,
+    header ul li a.active {
+      background: #008B8B;
+      color: #000000;
+    }
+
+    .homeText2 {
+      text-align: center;
+      color: white;
+      font-size: 2.2em;
+      font-weight: 700;
+      margin: 120px 20px 40px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      background: linear-gradient(45deg, #00bfff, #87ceeb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #e0e0e0;
+      font-size: 1.2em;
+      margin: -20px 20px 120px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+      font-style: italic;
+    }
+
+    .solar-system {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 60px 0;
+      padding: 40px 0;
+    }
+
+    .sun {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(255, 165, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .sun:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .belt {
+      height: 500px;
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      opacity: 0.4;
+      z-index: -5;
+      pointer-events: none;
+    }
+
+    /* Planet base styles */
+    .planet {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .planet:hover {
+      transform: scale(1.2);
+      box-shadow: 0 6px 25px rgba(0, 191, 255, 0.4);
+    }
+
+    /* Individual planet styles */
+    .resume {
+      width: 60px;
+      height: 60px;
+      animation: orbit-mercury 12s linear infinite;
+      z-index: 9;
+    }
+
+    .gmail {
+      width: 70px;
+      height: 70px;
+      animation: orbit-venus 18s linear infinite;
+      z-index: 8;
+    }
+
+    .linkedin {
+      width: 80px;
+      height: 80px;
+      animation: orbit-earth 24s linear infinite;
+      z-index: 7;
+    }
+
+    .outlook {
+      width: 75px;
+      height: 75px;
+      animation: orbit-mars 30s linear infinite;
+      z-index: 6;
+    }
+
+    /* Orbit animations with proper spacing */
+    @keyframes orbit-mercury {
+      from { 
+        transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg); 
+      }
+      to { 
+        transform: translate(-50%, -50%) rotate(360deg) translateX(140px) rotate(-360deg); 
+      }
+    }
+
+    @keyframes orbit-venus {
+      from { 
+        transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg); 
+      }
+      to { 
+        transform: translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg); 
+      }
+    }
+
+    @keyframes orbit-earth {
+      from { 
+        transform: translate(-50%, -50%) rotate(0deg) translateX(270px) rotate(0deg); 
+      }
+      to { 
+        transform: translate(-50%, -50%) rotate(360deg) translateX(270px) rotate(-360deg); 
+      }
+    }
+
+    @keyframes orbit-mars {
+      from { 
+        transform: translate(-50%, -50%) rotate(0deg) translateX(350px) rotate(0deg); 
+      }
+      to { 
+        transform: translate(-50%, -50%) rotate(360deg) translateX(350px) rotate(-360deg); 
+      }
+    }
+
+    /* Contact info section */
+    .contact-info {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      margin: 60px auto 40px;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(0, 191, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .contact-item h3 {
+      color: #00bfff;
+      margin: 0 0 10px 0;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-item h3:hover {
+      text-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+      transform: scale(1.05);
+    }
+
+    .contact-item p {
+      color: white;
+      margin: 0;
+      font-size: 1em;
+    }
+
+    /* Responsive Design - matching experience page breakpoints */
+    @media (max-width: 1200px) {
+      header {
+        padding: 20px 50px;
+      }
+      
+      .homeText2 {
+        font-size: 1.8em;
+        margin: 100px 15px 30px;
+      }
+      
+      .subtitle {
+        font-size: 1.1em;
+        margin: -15px 15px 100px;
+      }
+      
+      .contact-info {
+        margin: 30px 20px;
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 30px;
+        height: 70px;
+      }
+      
+      header .logo {
+        font-size: 1.5em;
+      }
+      
+      header ul {
+        flex-wrap: wrap;
+      }
+      
+      header ul li {
+        margin: 5px;
+      }
+      
+      .homeText2 {
+        font-size: 1.6em;
+        margin: 90px 10px 20px;
+      }
+      
+      .subtitle {
+        font-size: 1em;
+        margin: -10px 10px 80px;
+      }
+      
+      .solar-system {
+        height: 60vh;
+        margin: 40px 0;
+        padding: 30px 0;
+      }
+      
+      .sun {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .belt {
+        width: 500px;
+        height: 500px;
+      }
+      
+      .resume {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .gmail {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .linkedin {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .outlook {
+        width: 48px;
+        height: 48px;
+      }
+      
+      @keyframes orbit-mercury {
+        from { transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg); }
+      }
+      
+      @keyframes orbit-venus {
+        from { transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg) translateX(140px) rotate(-360deg); }
+      }
+      
+      @keyframes orbit-earth {
+        from { transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(-360deg); }
+      }
+      
+      @keyframes orbit-mars {
+        from { transform: translate(-50%, -50%) rotate(0deg) translateX(220px) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg) translateX(220px) rotate(-360deg); }
+      }
+      
+      .contact-info {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+      }
+      
+      header .logo {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
+      
+      header ul {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .homeText2 {
+        font-size: 1.4em;
+        margin: 80px 10px 15px;
+      }
+      
+      .subtitle {
+        font-size: 0.9em;
+        margin: -5px 10px 60px;
+      }
+      
+      .solar-system {
+        height: 50vh;
+        margin: 30px 0;
+        padding: 20px 0;
+      }
+      
+      .contact-info {
+        margin: 15px 10px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo">My Portfolio</a>
+    <ul>
+      <li><a href="new_index.html">Home</a></li>
+      <li><a href="experience_page.html">Projects & Experiences</a></li>
+    </ul>
+  </header>
+
+  <h1 class="homeText2">Connecting Across the Digital Universe</h1>
+  <p class="subtitle">Click on any orbiting planet to explore different ways to reach out!</p>
+
+  <div class="solar-system">
+    <img src="belt.png" class="belt" alt="Asteroid Belt">
+    <img src="Sun.png" class="sun" alt="Sun">
+    <a href="matthew_hernandez_resume_fall25.pdf" target="_blank">
+      <img src="Resume planet work 2.png" class="planet resume" alt="Resume Planet" title="Download My Resume">
+    </a>
+    <a href="mailto:matthewh0729@gmail.com">
+      <img src="Gmail planet.png" class="planet gmail" alt="Gmail Planet" title="Send Personal Email">
+    </a>
+    <a href="https://www.linkedin.com/in/mh0729" target="_blank">
+      <img src="LinkedIn planet.png" class="planet linkedin" alt="LinkedIn Planet" title="Connect on LinkedIn">
+    </a>
+    <a href="mailto:hernandezm117@usf.edu">
+      <img src="Outlook planet.png" class="planet outlook" alt="Outlook Planet" title="Send Academic Email">
+    </a>
+  </div>
+
+  <div class="contact-info">
+    <h2 style="text-align: center; color: #00bfff; margin-bottom: 20px;">Quick Contact Reference</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <a href="matthew_hernandez_resume_fall25.pdf" target="_blank" style="text-decoration: none;">
+          <h3>📄 Resume</h3>
+        </a>
+        <p>Download my latest resume showcasing aerospace engineering projects and academic achievements</p>
+      </div>
+      <div class="contact-item">
+        <a href="mailto:matthewh0729@gmail.com" style="text-decoration: none;">
+          <h3>📧 Personal Email</h3>
+        </a>
+        <p>matthewh0729@gmail.com<br>For general inquiries and opportunities</p>
+      </div>
+      <div class="contact-item">
+        <a href="https://www.linkedin.com/in/mh0729" target="_blank" style="text-decoration: none;">
+          <h3>💼 LinkedIn</h3>
+        </a>
+        <p>Professional networking and career connections</p>
+      </div>
+      <div class="contact-item">
+        <a href="mailto:hernandezm117@usf.edu" style="text-decoration: none;">
+          <h3>🎓 Academic Email</h3>
+        </a>
+        <p>hernandezm117@usf.edu<br>For university-related communications</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Header background opacity based on scroll (matching experience page functionality)
+    const header = document.querySelector('header');
+
+    function updateHeader() {
+      const value = window.scrollY;
+      
+      if (header && value > 50) {
+        header.style.background = `rgba(0, 0, 0, ${Math.min(0.9, value / 500)})`;
+      } else if (header) {
+        header.style.background = 'rgba(0, 0, 0, 0.1)';
+      }
+    }
+
+    // Throttle scroll events for better performance
+    let ticking = false;
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    }
+
+    function handleScroll() {
+      requestTick();
+      ticking = false;
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Initial call
+    updateHeader();
+
+    // Handle resize
+    window.addEventListener('resize', function() {
+      updateHeader();
+    }, { passive: true });
+  </script>
+</body>
+</html>

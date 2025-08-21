@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="#style-css">
+    <title>Projects & Experience</title>
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" href="astronaut1.png">
+    <!-- Optional for Apple devices -->
+    <link rel="apple-touch-icon" href="astronaut1.png">
+    <style id="style-css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .sophomore {
+            min-height: 200vh;
+            overflow-x: hidden;
+            background: linear-gradient(#000000, #7597de);
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        header .logo {
+            color: #ffff;
+            font-weight: 700;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+        
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        header ul li {
+            list-style: none;
+            margin-left: 10px;
+        }
+        
+        header ul li a {
+            font-weight: 600;
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #ffff;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        header ul li a:hover {
+            background: #008B8B;
+            color: #000000;
+        }
+        
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .sophSect::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #4d79ff, transparent);
+            z-index: 1000;
+        }
+        
+        section img {
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+            will-change: transform;
+        }
+        
+        #spaceCraft {
+            top: 500px;
+            left: 0;
+            width: 10%;
+            min-width: 80px;
+        }
+        
+        #stars {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        
+        #sun {
+            right: 10px;
+            width: 200px;
+            height: 200px;
+        }
+        
+        #horizon {
+            left: 0;
+            width: 60%;
+            top: 100px;
+            bottom: 0px;
+            transition: width 0.3s ease;
+        }
+        
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+            color: #ffffff;
+            white-space: nowrap;
+            font-size: clamp(2rem, 8vw, 6rem);
+            z-index: 5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            will-change: transform;
+        }
+        
+        .sec {
+            position: relative;
+            padding: 100px;
+            background: linear-gradient(#4d79ff, #000000);
+        }
+        
+        .sec p {
+            position: relative;
+            padding: 30px 100px;
+            margin-bottom: 5px;
+            color: #fff;
+            font-weight: 200;
+        }
+        
+        .sec h2 {
+            font-size: 2.8em;
+            margin-bottom: 8px;
+            color: #00D4AA;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            padding: 0 100px;
+            text-shadow: 0 2px 4px rgba(0, 212, 170, 0.3);
+            border-left: 4px solid #00D4AA;
+            padding-left: 104px;
+        }
+        
+        .role-title {
+            font-size: 1.4em;
+            color: #FFD700;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 25px;
+            padding: 0 104px;
+            letter-spacing: 0.8px;
+        }
+        
+        p.style5 {
+            color: #E8E8E8;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.15em;
+            line-height: 1.8;
+            font-weight: 300;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        p.style6 {
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6em;
+            text-align: center;
+            line-height: 1.6;
+            font-weight: 400;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skills-highlight {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #00D4AA;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skills-highlight b {
+            color: #FFD700;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+        
+        .experience-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(13, 27, 42, 0.7) 0%, rgba(27, 39, 51, 0.5) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            margin: 30px 60px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            header {
+                padding: 20px 50px;
+            }
+            
+            section {
+                padding: 50px;
+            }
+            
+            .sec {
+                padding: 50px;
+            }
+            
+            .sec h2 {
+                font-size: 2.2em;
+                padding: 0 50px;
+                padding-left: 54px;
+            }
+            
+            .role-title {
+                padding: 0 54px;
+                font-size: 1.2em;
+            }
+            
+            .experience-section {
+                margin: 20px 30px;
+                padding: 30px;
+            }
+            
+            .sec p {
+                padding: 20px 50px;
+            }
+            
+            /* Start increasing earth size on smaller screens */
+            #horizon {
+                width: 85%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 30px;
+                height: 70px;
+            }
+            
+            header .logo {
+                font-size: 1.5em;
+            }
+            
+            header ul {
+                flex-wrap: wrap;
+            }
+            
+            header ul li {
+                margin: 5px;
+            }
+            
+            section {
+                padding: 30px 20px;
+                height: 80vh;
+            }
+            
+            .sec {
+                padding: 30px 20px;
+            }
+            
+            .sec h2 {
+                font-size: 1.9em;
+                padding: 0 20px;
+                padding-left: 24px;
+                text-align: left;
+            }
+            
+            .role-title {
+                padding: 0 24px;
+                font-size: 1.1em;
+                text-align: left;
+            }
+            
+            .experience-section {
+                margin: 15px 10px;
+                padding: 25px;
+            }
+            
+            .sec p {
+                padding: 15px 20px;
+            }
+            
+            p.style5 {
+                font-size: 1.1em;
+                line-height: 1.8;
+            }
+            
+            p.style6 {
+                font-size: 1.3em;
+                line-height: 1.5;
+            }
+            
+            #spaceCraft {
+                width: 15%;
+                min-width: 60px;
+            }
+            
+            #sun {
+                width: 150px;
+                height: 150px;
+            }
+            
+            /* Significantly increase earth size on mobile */
+            #horizon {
+                width: 90%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 20px;
+            }
+            
+            header .logo {
+                font-size: 1.3em;
+                margin-bottom: 10px;
+            }
+            
+            header ul {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            section {
+                padding: 20px 15px;
+                height: 70vh;
+            }
+            
+            .sec {
+                padding: 20px 15px;
+            }
+            
+            .sec h2 {
+                font-size: 1.7em;
+                padding: 0 15px;
+                padding-left: 19px;
+                margin-bottom: 8px;
+            }
+            
+            .role-title {
+                padding: 0 19px;
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+            
+            .experience-section {
+                margin: 10px 5px;
+                padding: 20px;
+            }
+            
+            .sec p {
+                padding: 10px 15px;
+            }
+            
+            p.style5 {
+                font-size: 1em;
+                line-height: 1.6;
+            }
+            
+            p.style6 {
+                font-size: 1.2em;
+                line-height: 1.4;
+            }
+            
+            #text {
+                font-size: clamp(1.5rem, 10vw, 3rem);
+            }
+            
+            #spaceCraft {
+                width: 20%;
+                min-width: 50px;
+                top: 300px;
+            }
+            
+            #sun {
+                width: 100px;
+                height: 100px;
+            }
+            
+            /* Maximum earth size on smallest screens */
+            #horizon {
+                width: 120%;
+            }
+        }
+    </style>
+</head>
+
+<body class="sophomore">
+    <header>
+        <a class="logo">My Portfolio</a>
+        <ul>
+            <li><a href="new_index.html" class="active">Home</a></li>
+            <li><a href="contact_page_new.html">Contact Info</a></li>
+        </ul>
+    </header>
+    
+    <section class="sophSect">
+        <img src="background_ex.webp" id="stars">
+        <img src="real_sun.png" id="sun">
+        <img src="orion_spacecraft.png" id="spaceCraft">
+        <img src="real_earth.png" id="horizon">
+        <p id="text">Projects & Experiences</p>
+    </section>
+
+    <div class="sec" id="sec">
+        <p class="style6">Like a rocket launching into space, my understanding of aerospace engineering and the professional world has just begun to take shape. Over the next few years, I aim to expand my knowledge and put everything I've learned into action.</p>
+
+        <!-- Most Recent Experience - JPL -->
+        <div class="experience-section">
+            <h2>NASA Jet Propulsion Laboratory (JPL) - Ice Spectroscopy Lab</h2>
+            <div class="role-title">Europa ICONS Intern</div>
+            <p class="style5">
+                As a part of the Europa ICONS program at NASA's Jet Propulsion Laboratory, I am studying how electron radiation affects the surface composition of Europa using laboratory analogs. I assist in preparing icy and salty samples, running irradiation experiments, and collecting FTIR and UV-Vis spectra. Our aim is to simulate Jupiter's radiation environment and understand how Europa's surface evolves over time.
+            </p>
+            <p class="style5">
+                I also contribute to developing automated scripts for spectral analysis and image processing using Python, helping streamline data comparison across different sample types and environmental conditions. My work supports the Europa Clipper mission, particularly the MISE and EIS instruments.
+            </p>
+            <div class="skills-highlight">
+                <b>Skills:</b> Spectroscopy, FTIR and UV-Vis Analysis, Ultra High Vacuum Systems, Radiation Simulation, Data Processing, Python Scripting, Instrumentation Review, Laboratory Experimentation, Electron Simulations, Sample Preparation
+            </div>
+        </div>
+
+        <!-- KULR Technology Group -->
+        <div class="experience-section">
+            <h2>KULR Technology Group</h2>
+            <div class="role-title">Prototyping and Testing Intern</div>
+            <p class="style5">
+                At KULR Technology Group, I worked as a Battery Test Engineering Intern where I was involved in thermal testing, data collection, and failure analysis for lithium-ion battery cells. I led the setup of a charging cart for lab operations and developed a mechanism to test battery pouch bend capacity. One of my key contributions was integrating Python-based computer vision techniques to automate part of the testing process, which improved data retention by 20 percent.
+            </p>
+            <p class="style5">
+                I also supported the thermal runaway testing setup and ensured all results were properly documented for customer reports. The internship gave me the opportunity to work with engineers from different departments and understand how thermal management plays a vital role in safety-critical aerospace applications.
+            </p>
+            <div class="skills-highlight">
+                <b>Skills:</b> Battery Testing, Thermal Analysis, Computer Vision (Python), Data Acquisition, Mechanical Design, Lab Operations
+            </div>
+        </div>
+
+        <!-- NASA Kennedy Space Center -->
+        <div class="experience-section">
+            <h2>NASA Kennedy Space Center - Applied Chemistry Laboratory</h2>
+            <div class="role-title">NASA OSTEM Intern</div>
+            <p class="style5">
+                At Kennedy Space Center's Applied Chemistry Laboratory, I contributed to the Trash to Gas project by running tests of a pure oxygen system, recording gas data, and tackling challenges related to gas systems, such as fitting failures and leak checks.
+            </p>
+            <p class="style5">
+                I also supported the testing and maintenance of vacuum chambers for the Molten Regolith Electrolysis (MRE) project, aimed at extracting oxygen from molten regolith, and provided analysis of gas data for the Plasma Gas Synthesis project. I also helped lead the L.O.G.I.C. (Lunar Off-Gassing Investigative Characterization) project, where I created a vacuum environment to simulate the thermal breakdown of lunar regolith by applying current through an electrode. The objective was to analyze off-gassed species using a Residual Gas Analyzer (RGA) to identify the gases released from different lunar simulants. These initial findings could support future investigations into gas composition and explore the feasibility of repurposing the emitted gases for in-situ resource utilization.
+            </p>
+            <div class="skills-highlight">
+                <b>Skills:</b> Gas Systems, Vacuum Chamber Testing, FTIR and Gas Data Analysis, System Maintenance, Problem Solving, Engineering Documentation, ISS Applications
+            </div>
+        </div>
+
+        <!-- Cornell REU -->
+        <div class="experience-section">
+            <h2>Cornell Astrophysics and Planetary Sciences REU - ASTRA Lab</h2>
+            <div class="role-title">Research and Development Intern</div>
+            <p class="style5">
+                My work focused on researching cooling techniques for high-power Hall effect thrusters. Specifically, the research involved the fabrication and testing of cooling methods using a simulated plasma source, while also laying the groundwork for future thermal testing. Our primary objective was to determine whether implementing a water-cooling loop around a simulated thruster could significantly help maintain the system's thermal threshold.
+            </p>
+            <p class="style5">
+                My first responsibility was designing a test stand that met several key requirements, including adaptability for testing future variations, minimizing thermal contact, ensuring stability with the thruster, and allowing for adjustable height with standoffs. After completing the design, I coordinated with the machine shop to have the plate water-jetted and assembled the prototype using ceramic alumina and stainless steel components. I helped develop a test plan and manual that documented our procedures, from thermal testing to vacuum chamber operation.
+            </p>
+            <p class="style5">
+                At the end of the internship, I presented my research in a formal poster session, highlighting the importance of thermal management in future propulsion systems.
+            </p>
+            <div class="skills-highlight">
+                <b>Skills:</b> SolidWorks, Thermal System Design, Regenerative Cooling Concepts, Vacuum-Compatible Materials, Research Documentation, Literature Review, Poster Presentation
+            </div>
+        </div>
+
+        <!-- IEEE UCF -->
+        <div class="experience-section">
+            <h2>Institute of Electrical and Electronics Engineers Chapter at UCF</h2>
+            <div class="role-title">Professional Development Chair</div>
+            <p class="style5">
+                In June 2024, I assumed the role of Professional Development Chair at UCF IEEE to give back to my school and share my knowledge on career growth with the club. The club's board has been holding bi-weekly meetings leading up to the fall semester to prepare for events and collaborations with various companies. I have been developing plans and setting objectives for myself and my committee to meet deadlines and mitigate the workload during the fall semester.
+            </p>
+            <p class="style5">
+                My goal is to help our members grow professionally and teach them how to effectively market themselves to recruiters and at job fairs. Additionally, I was in charge of delegating a committee of 5 students to complete the organization and execution of events.
+            </p>
+            <div class="skills-highlight">
+                <b>Skills:</b> Event Planning, Leadership, Communication, Mentorship, Time Management, Outreach, Public Speaking
+            </div>
+        </div>
+
+        <!-- Knights Experimental Rocketry -->
+        <div class="experience-section">
+            <h2>Knights Experimental Rocketry (KXR)</h2>
+            <div class="role-title">IREC Propulsion Team Member</div>
+            <p class="style5">
+                During the spring of 2024, I specialized in the Mechanical and Manufacturing subteam, where I contributed to the design of various rocket components and played a key role in the fabrication process. I utilized CAD software and modeling techniques to design parts such as bulkheads, umbilical systems, O-rings, and struts. To further enhance my skill set, I began expanding my knowledge of MATLAB for simulations, aiding in calculations and trajectories for model rockets.
+            </p>
+            <p class="style5">
+                I also volunteered in the machine shop, which not only allowed me to save the club approximately $500 in assembly costs but also provided me with fundamental knowledge and hands-on experience using essential tools at my university's machine shop, including the manual mill, boring tools, and drilling tools.
+            </p>
+            <div class="skills-highlight">
+                <b>Skills:</b> SolidWorks, MATLAB, Rocket Propulsion Design, Manufacturing, Machining Tools, Trajectory Simulation
+            </div>
+        </div>
+
+        <!-- Earliest Experience - UCF Planetary Sciences Lab -->
+        <div class="experience-section">
+            <h2>Planetary Sciences Laboratory at UCF</h2>
+            <div class="role-title">Undergraduate Research Assistant</div>
+            <p class="style5">
+                The aim of this project was to take Visible to Near Infrared (VNIR) Spectra of lunar simulants to examine the changes in porosity and albedo. My work focused on analyzing multiple samples using a Nicolet iS50 FTIR Spectrometer, ensuring accuracy by comparing my measurements with pre-existing spectra. I played a key role in developing the sample products, testing different simulants, and meticulously documenting the process for future reference and optimization.
+            </p>
+            <p class="style5">
+                I also modified existing Python code to identify spectral graph continuums, contributing to the evaluation of reflectance data and the calculation of albedos for 40 diverse samples, including lunar and asteroid simulants. I actively participated in weekly meetings, where I provided detailed reports or presentations on my research findings and progress updates. I also leveraged the expertise of team members, offering support in using the spectrometer and various programming languages.
+            </p>
+            <p class="style5">
+                In March 2024, I presented my research through my first research poster, showcasing the work I contributed to the project and its significance in planetary science. A couple of months later, I presented this research at the 2024 NASA Exploration Science Forum (NESF), led by NASA SSERVI.
+            </p>
+            <div class="skills-highlight">
+                <b>Skills:</b> FTIR Spectroscopy, Python, Data Analysis, Scientific Writing, Public Speaking, Collaboration
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const stars = document.getElementById('stars');
+        const sun = document.getElementById('sun');
+        const text = document.getElementById('text');
+        const horizon = document.getElementById('horizon');
+        const header = document.querySelector('header');
+        const spaceCraft = document.getElementById('spaceCraft');
+
+        // Check if device supports parallax (not mobile with touch)
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const hasMotionSupport = window.DeviceMotionEvent !== undefined;
+        const supportsParallax = !isMobile || hasMotionSupport;
+
+        function updateParallax() {
+            const value = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const windowWidth = window.innerWidth;
+            
+            // Only apply parallax on larger screens or devices that support it
+            if (supportsParallax && windowWidth > 768) {
+                // Reduce parallax intensity for better performance
+                if (stars) stars.style.transform = `translateX(${value * 0.1}px)`;
+                if (sun) {
+                    sun.style.transform = `translate(${value * 0.2}px, ${value * 0.4}px)`;
+                }
+                if (horizon) {
+                    horizon.style.transform = `translateY(${value * 0.3}px)`;
+                }
+                if (spaceCraft) {
+                    spaceCraft.style.transform = `translateX(${value * 2.4}px)`;
+                }
+                if (text) {
+                    text.style.transform = `translate(-50%, -50%) translateX(${value * 2}px) translateY(${value * 1.5}px)`;
+                }
+            }
+            
+            // Header background opacity based on scroll
+            if (header && value > 50) {
+                header.style.background = `rgba(0, 0, 0, ${Math.min(0.9, value / 500)})`;
+            } else if (header) {
+                header.style.background = 'rgba(0, 0, 0, 0.1)';
+            }
+        }
+
+        // Throttle scroll events for better performance
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        function handleScroll() {
+            requestTick();
+            ticking = false;
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Initial call
+        updateParallax();
+
+        // Handle resize
+        window.addEventListener('resize', function() {
+            updateParallax();
+        }, { passive: true });
+    </script>
+</body>
+</html>
