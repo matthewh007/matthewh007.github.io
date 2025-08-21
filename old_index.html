@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<!--dsa-->
+<link rel="stylesheet" type ="text/css" href="style.css">
+
+<title>
+  Matthew's Portfolio 
+</title>
+
+<!-- Standard favicon -->
+<link rel="icon" type="image/png" href="astronaut1.png">
+
+<!-- Optional for Apple devices -->
+<link rel="apple-touch-icon" href="astronaut1.png">
+
+<header class="headerHome">
+  <a class= "logo"> My Portfolio </a>
+  <ul>
+    <li> <a href="sophomore.html"> Projects & Experiences </a> </li>
+    <li> <a href="contact_page.html"> Contact Info </a> </li>
+  </ul>
+  </header>
+
+<style>
+  body{
+    background-color:  #042F10;
+  }
+        .homeSect4 {
+/*            margin-top: 70px;*/
+            background:linear-gradient(to bottom, #042F10, black);
+            text-align: center;
+            color: #000;
+            padding: 15px;
+            height: 600px;
+        }
+
+        footer {
+            padding: 10px;
+            margin: 40px;
+            color: #000000;
+        }
+        #selfie2{
+          visibility: collapse;
+          width: 0;
+        }
+        #footer1{
+          visibility: collapse;
+          width: 0;
+        }
+    </style>
+<body>
+
+<section class="homeSect2">
+    
+    <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200812135448/iStock-1057665734.jpg" id="stars3">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/008/507/561/small/lens-flare-light-special-effect-background-free-png.png" id="light">
+    <img src="https://cdn.icon-icons.com/icons2/2613/PNG/512/rocket_launching_spaceship_space_exploration_astronaut_icon_156882.png" id="rocket">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/020/917/802/small/smoke-trails-for-missile-3d-render-png.png" id="smoke">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/020/917/802/small/smoke-trails-for-missile-3d-render-png.png" id="smoke2">
+   <img src="https://www.freeiconspng.com/uploads/grass-landscape-green-png-images-3.png" id="landscape">
+   
+
+</section>
+
+
+
+
+<div id="main" style="color:white; text-shadow:1px 1px 0 #444; text-align: center;">
+
+<br></br>
+<h1 class="homeText2"> New Horizons in Aerospace: Crafting Tomorrow's Sky </h1>
+
+<h2 class="homeText2"> Welcome to my page! </h2>
+
+<p class="paraText2"> Thank you for taking the time to view my website. </p>
+<p class="paraText2">
+    My name is <b style="color: deepskyblue;"> Matthew Hernandez</b>, a dedicated student enrolled at the <b style="color: lightgreen;"> University of South Florida</b>. Currently, I am pursuing a Bachelor of Science in <b style="color: deepskyblue;"> Aerospace Engineering</b>, with a minor in <b style="color: deepskyblue;"> Computer Science and Physics</b>.
+</p>
+<p class="paraText2">
+    As I explore the vast opportunities that university life offers, I am glad to present the milestones of my academic journey.
+</p>
+
+<br></br>
+<br></br>
+<br></br>
+
+<img src="https://cdni.iconscout.com/illustration/premium/thumb/man-looking-through-telescope-4225512-3539697.png" id="dude">
+
+<img src = "selfie.jpg" id="selfie2">  </a>
+</div>
+
+    <footer id="footer1">
+        <p> </p>
+    </footer>
+
+<section class="homeSect4">
+    
+   <p class="paraText3">
+    My objective for this portfolio to also showcase various projects and significant experiences during my time at USF.
+</p>
+   <img src = "headshot.jpg" id="selfie">  </a>
+
+</section>
+</body>
+<script>
+let stars3=document.getElementById('stars3');
+let landscape=document.getElementById('landscape');
+let rocket=document.getElementById('rocket');
+let smoke=document.getElementById('smoke');
+let smoke2=document.getElementById('smoke2');
+    window.addEventListener('scroll', function()
+    {
+      let value=window.scrollY;
+      let value2=window.scrollY;
+      stars3.style.marginLeft = value * 0.8 +'px';
+      landscape.style.top = value * 0.12 +'px';
+      rocket.style.bottom = value * 20 + 'px';
+      smoke.style.bottom = value * 25 + 'px';
+      smoke2.style.bottom = value * 25 + 'px';
+      //star.style.filter=brightness(value*1-'px')
+
+    })
+
+window.addEventListener('load', () => {
+  landscape.style.top = '0px'; // initialize
+});
+
+</script>
+<style>
+
+/*
+
+@media screen and (max-width: 1023px), screen and (max-height:590px), screen and (min-height:1365px){
+  body{
+    background-image: url('https://wallpaperaccess.com/full/39632.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 170%;
+    width: 100%;
+
+    display: flow;
+    align-items: center;
+    justify-content: center;
+    }
+
+  .homeText2
+  {
+    font-weight: 800;
+    font-size: 1.5em;
+  }
+  header{
+    width: 100%;
+    padding: 40px 40px;
+  }
+  header .logo{
+    font-size: 1.7em;
+    text-align: center;
+
+  }
+  section{
+    height: 50vh;
+  }
+  #selfie2{
+    width: 70%;
+    height: auto;
+    position: relative;
+    left: -40px;
+    visibility: visible;
+  }
+  
+    #landscape{
+      visibility: collapse;
+    }
+    #dude{
+      visibility: collapse;
+    }
+    #light{
+      visibility: collapse;
+    }
+    #stars3{
+      visibility: collapse;
+      width: 190%;
+    }
+    .homeSect2{
+      height: 1700px;
+      visibility: collapse;
+      min-height: 1700px
+    }
+    .homeSect2::before
+    {
+      width: 0;
+      visibility: collapse;
+    }
+    
+    .homeSect4{
+        visibility: collapse;
+        width: 0;
+    }
+
+    #footer1
+    {
+            padding: 20px;
+            margin: 20px;
+            color: #fff;
+            padding: 10px;
+    }
+}
+*/
+</style>
+
+</body>
+</html>
