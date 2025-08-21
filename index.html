@@ -14,19 +14,73 @@
 <!-- Optional for Apple devices -->
 <link rel="apple-touch-icon" href="astronaut1.png">
 
-<header class="headerHome">
-  <a class= "logo"> My Portfolio </a>
-  <ul>
-    <li> <a href="experience_page.html"> Projects & Experiences </a> </li>
-    <li> <a href="contact_page_new.html"> Contact Info </a> </li>
-  </ul>
-  </header>
 
 <style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
   body{
     background-color:  #042F10;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+        
+  /* Updated header to match experience page */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10000;
+      transition: all 0.3s ease;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    header .logo {
+      color: #ffff;
+      font-weight: 700;
+      font-size: 2em;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    header ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header ul li {
+      list-style: none;
+      margin-left: 10px;
+    }
+
+    header ul li a {
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 15px;
+      color: #ffff;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    header ul li a:hover {
+      background: #008B8B;
+      color: #000000;
+    }
         .homeSect4 {
 /*            margin-top: 70px;*/
             background:linear-gradient(to bottom, #042F10, black);
@@ -153,8 +207,57 @@
           margin: 0 auto;
           text-align: center;
         }
+      @media (max-width: 1200px) {
+            header {
+                padding: 20px 50px;
+            }
+      }
+      @media (max-width: 768px) {
+            header {
+                padding: 15px 30px;
+                height: 70px;
+            }
+            
+            header .logo {
+                font-size: 1.5em;
+            }
+            
+            header ul {
+                flex-wrap: wrap;
+            }
+            
+            header ul li {
+                margin: 5px;
+            }
+          }
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 20px;
+            }
+            
+            header .logo {
+                font-size: 1.3em;
+                margin-bottom: 10px;
+            }
+            
+            header ul {
+                width: 100%;
+                justify-content: center;
+            }
+          }
     </style>
 <body>
+
+<header class="headerHome">
+  <a class= "logo"> My Portfolio </a>
+  <ul>
+    <li> <a href="experience_page.html"> Projects & Experiences </a> </li>
+    <li> <a href="contact_page_new.html"> Contact Info </a> </li>
+  </ul>
+  </header>
+
 
 <section class="homeSect2">
     
@@ -241,7 +344,6 @@
    <img src = "headshot.jpg" id="selfie" style="border-radius: 50%; border: 4px solid #00bfff; box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);">
 
 </section>
-</body>
 <script>
 let stars3=document.getElementById('stars3');
 let landscape=document.getElementById('landscape');
@@ -265,88 +367,41 @@ window.addEventListener('load', () => {
   landscape.style.top = '0px'; // initialize
 });
 
+    function updateHeader() {
+      const value = window.scrollY;
+      
+      if (header && value > 50) {
+        header.style.background = `rgba(0, 0, 0, ${Math.min(0.9, value / 500)})`;
+      } else if (header) {
+        header.style.background = 'rgba(0, 0, 0, 0.1)';
+      }
+    }
+
+    // Throttle scroll events for better performance
+    let ticking = false;
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    }
+
+    function handleScroll() {
+      requestTick();
+      ticking = false;
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Initial call
+    updateHeader();
+
+    // Handle resize
+    window.addEventListener('resize', function() {
+      updateHeader();
+    }, { passive: true });
 </script>
-<style>
-
-/*
-
-@media screen and (max-width: 1023px), screen and (max-height:590px), screen and (min-height:1365px){
-  body{
-    background-image: url('https://wallpaperaccess.com/full/39632.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 170%;
-    width: 100%;
-
-    display: flow;
-    align-items: center;
-    justify-content: center;
-    }
-
-  .homeText2
-  {
-    font-weight: 800;
-    font-size: 1.5em;
-  }
-  header{
-    width: 100%;
-    padding: 40px 40px;
-  }
-  header .logo{
-    font-size: 1.7em;
-    text-align: center;
-
-  }
-  section{
-    height: 50vh;
-    }
-  #selfie2{
-    width: 70%;
-    height: auto;
-    position: relative;
-    left: -40px;
-    visibility: visible;
-  }
-  
-    #landscape{
-      visibility: collapse;
-    }
-    #dude{
-      visibility: collapse;
-    }
-    #light{
-      visibility: collapse;
-    }
-    #stars3{
-      visibility: collapse;
-      width: 190%;
-    }
-    .homeSect2{
-      height: 1700px;
-      visibility: collapse;
-      min-height: 1700px
-    }
-    .homeSect2::before
-    {
-      width: 0;
-      visibility: collapse;
-    }
-    
-    .homeSect4{
-        visibility: collapse;
-        width: 0;
-    }
-
-    #footer1
-    {
-            padding: 20px;
-            margin: 20px;
-            color: #fff;
-            padding: 10px;
-    }
-}
-*/
-</style>
 
 </body>
 </html>
