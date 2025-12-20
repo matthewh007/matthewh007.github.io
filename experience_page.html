@@ -444,7 +444,7 @@
     </section>
 
     <div class="sec" id="sec">
-        <p class="style6">Like a rocket launching into space, my understanding of aerospace engineering and the professional world has just begun to take shape. Over the next few years, I aim to expand my knowledge and put everything I've learned into action.</p>
+        <p class="style6">Like a rocket launching into space, my understanding of aerospace engineering and the professional world has just begun to take flight. Over the next few years, I aim to expand my knowledge of science and engineering, and put everything I've learned into action.</p>
 
         <!-- Most Recent Experience - JPL -->
         <div class="experience-section">
@@ -484,10 +484,10 @@
                 At KULR Technology Group, I supported the development and evaluation of battery systems for aerospace applications by designing and assembling test mechanisms. I designed a custom fixture to evaluate the bend capacity of cell pouches prior to thermal runaway testing, ensuring structural integrity before subjecting cells to extreme conditions. I also modeled, procured components for, and built a custom charging cart to safely charge cells and organize critical lab electronics, streamlining lab operations and improving workflow efficiency.
             </p>
             <p class="style5">
-                I contributed to the creation and refinement of CAD drawings to meet testing and fabrication needs while ensuring compliance with company standards. Additionally, I assisted in the setup of an environmental vacuum system by configuring gas system connections and supporting procurement to enable future environmental vacuum testing capabilities. One of my key contributions was developing a Python script utilizing Roboflow's API to implement a computer vision model for angle analysis of battery cell degradation ejecta, which improved data retention by 20 percent.
+                I contributed to the creation and refinement of CAD drawings to meet testing and fabrication needs while ensuring compliance with company standards. Additionally, I assisted in the setup of an environmental vacuum system by configuring gas system connections and supporting procurement to enable future environmental vacuum testing capabilities.
             </p>
             <p class="style5">
-                I also supported the thermal runaway testing setup and ensured all results were properly documented for customer reports. The internship gave me the opportunity to work with engineers from different departments and understand how thermal management plays a vital role in safety-critical aerospace applications.
+                I also supported the thermal runaway testing setup and ensured all results were properly documented for customer reports. The internship gave me the opportunity to work with engineers from various disciplines and understand how thermal management plays a vital role in safety-critical aerospace applications.
             </p>
 
             <!-- 3D MODEL SHOWCASE - BATTERY TESTING -->
@@ -516,7 +516,7 @@
                     </iframe>
                 </div>
                 
-                <!-- Controls Info -->
+<!-- Controls Info -->
                 <div style="background: rgba(0,0,0,0.5); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: #E8E8E8; flex-wrap: wrap; gap: 10px;">
                     <div style="display: flex; align-items: center; gap: 15px;">
                         <span style="display: flex; align-items: center; gap: 5px;">
@@ -531,8 +531,33 @@
                     <span style="color: #FFD700; font-size: 0.8em;">🔍 Click fullscreen for detailed inspection</span>
                 </div>
                 
+                <!-- Notable Components Description -->
+                <div style="background: rgba(0,0,0,0.5); padding: 12px 20px; font-size: 0.85em; color: #E8E8E8;">
+                    <span style="color: #FFD700;">⚡</span> <strong>Key Electronic Components:</strong> Multi-channel battery chargers with programmable charging profiles, integrated power distribution system, voltage and current monitoring displays, emergency shutdown controls, and organized cable management system for safe cell charging operations
+                </div>
+                
             </div>
             <!-- END 3D MODEL SHOWCASE -->
+
+            <p class="style5">
+                One of my key contributions was developing a Python script utilizing Roboflow's API to implement a computer vision model for angle analysis automation of videos of battery cell degradation ejecta by nail penetration, which improved data retention. This code goes through and tracks all the inner and outer angles for the ejecta for every clear frame. It then saves the frame and records the angles in an excel file.
+            </p>
+
+            <!-- COMPUTER VISION ANALYSIS SHOWCASE -->
+            <div style="margin: 25px 0; background: rgba(0,0,0,0.3); border-radius: 15px; overflow: hidden; border: 1px solid rgba(0,212,170,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+                <div style="background: linear-gradient(135deg, rgba(0,212,170,0.1) 0%, rgba(255,215,0,0.05) 100%); padding: 15px 20px; border-bottom: 1px solid rgba(0,212,170,0.2);">
+                    <div style="color: #00D4AA; font-size: 1.2em; font-weight: 600; margin: 0 0 5px 0; text-shadow: 0 2px 4px rgba(0,212,170,0.3);">Computer Vision Angle Analysis</div>
+                    <div style="color: #FFD700; font-size: 0.95em; font-style: italic; opacity: 0.9;">Automated detection and measurement of battery cell ejecta trajectories during thermal runaway</div>
+                </div>
+                <div style="padding: 20px; background: rgba(0,0,0,0.2);">
+                    <img src="battery ejecta with angle.png" alt="Computer Vision Ejecta Angle Analysis" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                </div>
+                <div style="background: rgba(0,0,0,0.5); padding: 15px 20px; font-size: 0.9em; color: #E8E8E8; line-height: 1.6;">
+                    <p style="margin: 0 0 10px 0;"><span style="color: #FFD700;">🔍 Technical Implementation:</span> The Python script processes each frame to detect bounding boxes around ejected material, calculates the centroid positions, and applies trigonometric analysis to determine trajectory angles relative to the horizontal plane.</p>
+                    <p style="margin: 0;"><span style="color: #00D4AA;">📊 Data Output:</span> The system automatically generates angle measurements (shown as percentages in the visualization), tracks multiple ejecta streams simultaneously, and exports timestamped data for statistical analysis. This automation replaced manual frame-by-frame analysis, significantly improving data accuracy and retention while reducing analysis time from hours to minutes per test.</p>
+                </div>
+            </div>
+            <!-- END COMPUTER VISION ANALYSIS SHOWCASE -->
 
             <div class="skills-highlight">
                 <b>Skills:</b> Battery Testing, Thermal Analysis, Computer Vision (Python), Data Acquisition, Mechanical Design, Lab Operations
@@ -608,6 +633,57 @@
     <p class="style5">
         My first responsibility was designing a test stand that met several key requirements, including adaptability for testing future variations, minimizing thermal contact, ensuring stability with the thruster, and allowing for adjustable height with standoffs. After completing the design, I coordinated with the machine shop to have the plate water-jetted and assembled the prototype using ceramic alumina and stainless steel components.
     </p>
+
+<!-- PHYSICAL PROTOTYPE SHOWCASE -->
+<div style="margin: 30px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+    
+    <!-- Side View -->
+    <div style="background: rgba(0,0,0,0.35); border-radius: 15px; padding: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+        <img src="test stand side.jpg" 
+             alt="Hall Thruster Test Stand – Side View"
+             style="width: 100%; height: 260px; object-fit: cover; border-radius: 10px;">
+        
+        <div style="
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: rgba(0,212,170,0.15);
+            border: 1px solid rgba(0,212,170,0.35);
+            border-radius: 999px;
+            text-align: center;
+            color: #FFD700;
+            font-size: 0.85em;
+            font-style: italic;
+            box-shadow: 0 0 12px rgba(0,212,170,0.25);
+        ">
+            Physical prototype — side view showing ceramic standoffs and aluminum base plate
+        </div>
+    </div>
+
+    <!-- Isometric View -->
+    <div style="background: rgba(0,0,0,0.35); border-radius: 15px; padding: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+        <img src="test stand iso.jpg" 
+             alt="Hall Thruster Test Stand – Isometric View"
+             style="width: 100%; height: 260px; object-fit: cover; border-radius: 10px;">
+        
+        <div style="
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: rgba(0,212,170,0.15);
+            border: 1px solid rgba(0,212,170,0.35);
+            border-radius: 999px;
+            text-align: center;
+            color: #FFD700;
+            font-size: 0.85em;
+            font-style: italic;
+            box-shadow: 0 0 12px rgba(0,212,170,0.25);
+        ">
+            Assembled test stand — isometric view highlighting adjustable three-support configuration
+        </div>
+    </div>
+
+</div>
+<!-- END PHYSICAL PROTOTYPE SHOWCASE -->
+
     <p class="style5">
         I helped develop a test plan and manual that documented our procedures, from thermal testing to vacuum chamber operation. The three-support configuration shown in the model provided optimal stability while minimizing thermal bridging between the test article and the support structure.
     </p>
