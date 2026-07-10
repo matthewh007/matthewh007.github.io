@@ -549,8 +549,11 @@
                     <div style="color: #00D4AA; font-size: 1.2em; font-weight: 600; margin: 0 0 5px 0; text-shadow: 0 2px 4px rgba(0,212,170,0.3);">Computer Vision Angle Analysis</div>
                     <div style="color: #FFD700; font-size: 0.95em; font-style: italic; opacity: 0.9;">Automated detection and measurement of battery cell ejecta trajectories during thermal runaway</div>
                 </div>
-                <div style="padding: 20px; background: rgba(0,0,0,0.2);">
-                    <img src="battery ejecta with angle.png" alt="Computer Vision Ejecta Angle Analysis" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                    <div style="padding: 20px; background: rgba(0,0,0,0.2);">
+                    <video controls style="width: 100%; position:relative; z-index:999; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                        <source src="shorter video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div style="background: rgba(0,0,0,0.5); padding: 15px 20px; font-size: 0.9em; color: #E8E8E8; line-height: 1.6;">
                     <p style="margin: 0 0 10px 0;"><span style="color: #FFD700;">🔍 Technical Implementation:</span> The Python script processes each frame to detect bounding boxes around ejected material, calculates the centroid positions, and applies trigonometric analysis to determine trajectory angles relative to the horizontal plane.</p>
